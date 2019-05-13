@@ -8,7 +8,7 @@ confinement: devmode # use 'strict' once you have the right plugs and slots
 
 apps:
         fbtest:
-                command: fbtest
+                command: bin/fbtest
 
 parts:
   embedded-misc-utils:
