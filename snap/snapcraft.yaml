@@ -10,6 +10,10 @@ apps:
         fbtest:
                 command: bin/fbtest
 
+apps:
+        hello:
+                command: bin/hello
+
 parts:
   embedded-misc-utils:
     # See 'snapcraft plugins'
