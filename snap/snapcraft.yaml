@@ -5,6 +5,10 @@ description: |
   This is a collection of hardware/software test utilities for embedded systems
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
+=======
+source: git://github.com/taiten/embedded-misc-utils
+plugin: make
+confinement: strict # use 'strict' once you have the right plugs and slots
 apps:
         fbtest:
                 command: bin/fbtest
