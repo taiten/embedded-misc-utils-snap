@@ -4,8 +4,6 @@ summary: Simple collection of tools to test embedded systems # 79 char long summ
 description: |
   This is a collection of hardware/software test utilities for embedded systems
 grade: devel # must be 'stable' to release into candidate/stable channels
-source: git://github.com/taiten/embedded-misc-utils
-plugin: make
 confinement: devmode # use 'strict' once you have the right plugs and slots
 apps:
         fbtest:
@@ -13,3 +11,7 @@ apps:
 apps:
         hello:
                 command: bin/hello
+parts:
+  embedded-misc-utils:
+    # See 'snapcraft plugins'
+    plugin: make
