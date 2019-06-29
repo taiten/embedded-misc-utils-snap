@@ -5,12 +5,6 @@ description: |
   This is a collection of hardware/software test utilities for embedded systems
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
-apps:
-        fbtest:
-                command: bin/fbtest
-apps:
-        hello:
-                command: bin/hello
 parts:
   embedded-misc-utils:
     # See 'snapcraft plugins'
