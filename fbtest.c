@@ -96,7 +96,7 @@ draw_pixel(fbmem,x,y,0xffff0000);
 
 draw_pixel(fbmem,x,y+HEIGHT,0xff00ff00);
 
-draw_pixel(fbmem,x,y+HEIGHT*2,0xff0000ff);
+//draw_pixel(fbmem,x,y+HEIGHT*2,0xff0000ff);
 
 #else
 			if (x < 20 && y < 20)
@@ -203,10 +203,10 @@ int main(int argc, char** argv)
 	usleep(500000);
 	printf("current yoffset = %d\n", var.yoffset);
 	//display buffer 2
-	var.yoffset = HEIGHT*2;
-	FBCTL(FBIOPAN_DISPLAY, &var);
-	usleep(500000);
-	printf("current yoffset = %d\n", var.yoffset);
+//	var.yoffset = HEIGHT*2;
+//	FBCTL(FBIOPAN_DISPLAY, &var);
+//	usleep(500000);
+//	printf("current yoffset = %d\n", var.yoffset);
 	}
 
 	return 0;
