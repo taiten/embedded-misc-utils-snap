@@ -29,9 +29,6 @@
 struct fb_var_screeninfo var;
 struct fb_fix_screeninfo fix;
 
-//#define WIDTH 800
-//#define HEIGHT 600
-
 int open_fb(const char* dev)
 {
 	int fd = -1;
