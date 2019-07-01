@@ -29,8 +29,8 @@
 struct fb_var_screeninfo var;
 struct fb_fix_screeninfo fix;
 
-#define WIDTH 800
-#define HEIGHT 600
+//#define WIDTH 800
+//#define HEIGHT 600
 
 int open_fb(const char* dev)
 {
@@ -80,7 +80,7 @@ static void draw_pixel(void *fbmem, int x, int y, unsigned color)
 	}
 }
 
-void fill_screen(void *fbmem)
+void fill_screen(void *fbmem,int HEIGHT,int WIDTH)
 {
 	unsigned x, y;
 	unsigned h = HEIGHT;
@@ -94,7 +94,7 @@ void fill_screen(void *fbmem)
 
 draw_pixel(fbmem,x,y,0xffff0000);
 
-draw_pixel(fbmem,x,y+HEIGHT,0xff00ff00);
+//draw_pixel(fbmem,x,y+HEIGHT,0xff00ff00);
 
 //draw_pixel(fbmem,x,y+HEIGHT*2,0xff0000ff);
 
@@ -189,7 +189,7 @@ int main(int argc, char** argv)
 	}
 	printf("current yoffset = %d\n", var.yoffset);
 
-	fill_screen(ptr);
+	fill_screen(ptr,var.xres,var.yres);
 
 	while (1) {
 	//display buffer 0
@@ -198,10 +198,10 @@ int main(int argc, char** argv)
 	usleep(500000);
 	printf("current yoffset = %d\n", var.yoffset);
 	//display buffer 1
-	var.yoffset = HEIGHT;
-	FBCTL(FBIOPAN_DISPLAY, &var);
-	usleep(500000);
-	printf("current yoffset = %d\n", var.yoffset);
+//	var.yoffset = HEIGHT;
+//	FBCTL(FBIOPAN_DISPLAY, &var);
+//	usleep(500000);
+//	printf("current yoffset = %d\n", var.yoffset);
 	//display buffer 2
 //	var.yoffset = HEIGHT*2;
 //	FBCTL(FBIOPAN_DISPLAY, &var);
