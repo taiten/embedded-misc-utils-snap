@@ -92,7 +92,7 @@ void fill_screen(void *fbmem,int HEIGHT,int WIDTH)
 
 #if 1 
 
-draw_pixel(fbmem,x,y,0xffff0000);
+draw_pixel(fbmem,x,y,0xff00ff00);
 
 //draw_pixel(fbmem,x,y+HEIGHT,0xff00ff00);
 
