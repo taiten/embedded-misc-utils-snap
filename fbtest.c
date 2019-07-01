@@ -190,7 +190,7 @@ int main(int argc, char** argv)
 	}
 	printf("current yoffset = %d\n", var.yoffset);
 
-	fill_screen(ptr,var.xres,var.yres);
+	fill_screen(ptr,var.yres,var.xres);
 
 	while (1) {
 	//display buffer 0
