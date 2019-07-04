@@ -198,6 +198,7 @@ int main(int argc, char** argv)
 //	var.yoffset = HEIGHT;
 //	FBCTL(FBIOPAN_DISPLAY, &var);
 //	usleep(500000);
+		
 //	printf("current yoffset = %d\n", var.yoffset);
 	//display buffer 2
 //	var.yoffset = HEIGHT*2;
