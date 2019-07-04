@@ -205,6 +205,7 @@ int main(int argc, char** argv)
 //	usleep(500000);
 //	printf("current yoffset = %d\n", var.yoffset);
 	}
+	
 
 	return 0;
 
