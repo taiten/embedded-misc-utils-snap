@@ -24,7 +24,11 @@
 #define FBCTL0(cmd)			\
 	if(ioctl(fd, cmd) == -1) {	\
 		ERROR("ioctl failed");	\
-		exit(1); }
+
+
+
+
+exit(1); }
 
 struct fb_var_screeninfo var;
 struct fb_fix_screeninfo fix;
