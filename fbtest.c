@@ -144,6 +144,8 @@ draw_pixel(fbmem,x,y,0xff00ff00);
 }
 
 
+
+
 int main(int argc, char** argv)
 {
 	int fb_num;
